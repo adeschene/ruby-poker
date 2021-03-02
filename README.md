@@ -1,6 +1,6 @@
 Twelfth Ruby on Rails Bootcamp assignment.
 
-A simple blackjack CLI game written in Ruby.
+A simple No Limit Texas Hold 'em CLI game written in Ruby.
 
 NOTES:
 
