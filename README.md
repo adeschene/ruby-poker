@@ -6,7 +6,7 @@ INSTRUCTIONS:
 
 - Download all files to the same folder.
 - Run the game in a terminal with:
-     -- ruby game.rb
+     - ruby game.rb
 
 NOTES:
 
