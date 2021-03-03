@@ -5,7 +5,8 @@ A simple No Limit Texas Hold 'em CLI game written in Ruby.
 INSTRUCTIONS:
 
 - Download all files to the same folder.
-- Run the game in a terminal with:
+- Make sure you have Ruby installed.
+- Run the game in the terminal with:
      - ruby game.rb
 
 NOTES:
