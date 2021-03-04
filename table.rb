@@ -55,8 +55,8 @@ class Table
   def setup_preflop
     # Shuffle the deck
     @deck.shuffle
-    # Assign dealer coin
-    @has_dealer_coin = @has_dealer_coin.nil? ? @players[0] : next_player(@has_dealer_coin)
+    # Assign dealer coin to random player if first hand, otherwise player to dealer's left
+    @has_dealer_coin = @has_dealer_coin.nil? ? @players.sample : next_player(@has_dealer_coin)
     # Forced small & big blind bets
     small_blind_better = next_player(@has_dealer_coin)
     big_blind_better   = next_player(small_blind_better)
@@ -64,6 +64,25 @@ class Table
     add_player_bet(big_blind_better, @current_bet) # Player forced to bet $2
     # Set player to big blind better's left as first to play
     @active_player = next_player(big_blind_better)
+    # Print intro text for user
+    hand_intro(small_blind_better, big_blind_better)
+  end
+
+  # Print info about the starting state of the hand to the screen for the user
+  def hand_intro(small, big)
+    # A lambda that prints "You" instead of "Player #x" if player is the user
+    decide_name = lambda {
+      |player| player.is_a?(User) ? "You      "
+        : "Player ##{player.player_id+1}"
+    }
+    print get_divider + "\n\n%30s\n\n%34s\n%34s\n%34s\n%34s\n" % [
+      "HAND STARTING!",
+      "Dealer coin: #{decide_name.call(@has_dealer_coin)}",
+      "Small blind: #{decide_name.call(small)}",
+      "Big blind: #{decide_name.call(big)}",
+      "Under the gun: #{decide_name.call(@active_player)}"
+    ]
+    gets # Pause to let player see the starting state of the hand
   end
 
   # Increments current round, resets current bet, resets player bets
