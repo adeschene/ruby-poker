@@ -37,7 +37,7 @@ require_relative "deck"
     # All players show their hand
     # Player with best hand wins the pot
 
-# MISCELLANEOUS RULES
+# MISCELLANEOUS NOTES
 
   # Player number is green
   # Opponent numbers are dark red

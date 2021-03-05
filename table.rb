@@ -129,7 +129,7 @@ class Table
 
   # SPECIAL CASE HANDLING METHODS---
 
-  #
+  # Called if every player except one folds
   def handle_early_win
     winning_player = @players.find { |player| player.folded == false }
     print get_divider + (winning_player.is_a?(User) ? "\n\n%33s\n" % "You won by default!"
@@ -353,7 +353,7 @@ class Table
     print table_string # Display the complete table to the user
   end
 
-  #
+  # Handles the dealing necessary during each round
   def deal_cards
     case @curr_round
     when 'preflop' # Deal 2 cards to each player (their hole cards)

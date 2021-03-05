@@ -34,6 +34,8 @@ end
 
 # Represents a standard 52 deck of cards; can shuffle itself, draw cards
 class Deck
+  attr_reader :cards
+
   def initialize
     # For each rank, create a card of each suit (makes standard 52 card deck)
     @cards = [2,3,4,5,6,7,8,9,10,11,12,13,14].map {
