@@ -7,10 +7,10 @@ INSTRUCTIONS:
 - Download all files to the same folder.
 - Make sure you have Ruby installed.
 - If you want to run tests, make sure RSpec is installed.
-- Run game:
-     - In terminal: ruby game.rb
-- Run tests:
-     - In terminal: ruby tests.rb
+- To play:
+  - In terminal: ruby game.rb
+- To test:
+  - In terminal: ruby tests.rb
 
 NOTES:
 
