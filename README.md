@@ -6,8 +6,10 @@ INSTRUCTIONS:
 
 - Download all files to the same folder.
 - Make sure you have Ruby installed.
-- Run the game in the terminal with:
-     - ruby game.rb
+- Run game:
+     - In terminal: ruby game.rb
+- Run tests:
+     - In terminal: ruby tests.rb
 
 NOTES:
 
